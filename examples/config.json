@@ -1,0 +1,9 @@
+{
+  "mode": "mask",
+  "enable": ["postal_code"],
+  "disable": [],
+  "keep_ip_prefix": true,
+  "sin_context": true,
+  "patterns": {"order_id": "ORD-[0-9]{6}"},
+  "json_keys": ["user.email", "headers.authorization"]
+}

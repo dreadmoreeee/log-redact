@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "log-redact"
+version = "0.1.0"
+description = "Redact personal data and secrets from logs and text files before sharing them."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Marvin Palencia" }]
+keywords = ["redaction", "privacy", "logs", "pii", "pseudonymization"]
+
+[project.scripts]
+log-redact = "log_redact.cli:main"
+
+[tool.setuptools]
+packages = ["log_redact"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

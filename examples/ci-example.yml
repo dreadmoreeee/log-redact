@@ -1,0 +1,5 @@
+# Example CI step (adapt to your CI system): fail if a log about to be
+# published as an artifact still contains sensitive data.
+steps:
+  - run: python -m log_redact build/app.log -o build/app.redacted.log --report redact-report.json
+  - run: python -m log_redact build/app.redacted.log --quiet --fail-if-found > /dev/null
